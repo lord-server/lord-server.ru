@@ -16,3 +16,8 @@ jobs:
 
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
+
+      - name: PHP-CS-Fixer
+        uses: docker://oskarstark/php-cs-fixer-ga
+        with:
+          args: --diff --dry-run
