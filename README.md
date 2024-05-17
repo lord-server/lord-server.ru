@@ -1,11 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# lord-server.ru
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Official [website](http://lord-server.ru/) of Russian L.O.R.D. server for Minetest
+
+- [Local Deploy](#local-deploy)
+- [Usage in development](#usage-in-development)
+    - [Everyday up & down](#everyday-up-&-down)
+    - [Code Style Check & Fix](#code-style-check-&-fix)
+    - [Control Code Quality](#control-code-quality)
+- [About Laravel](#about-laravel)
+
+## Local deploy
+
+- Clone the project
+  ```bash
+  git clone git@gitlab.com:ava-it-group/investments/web-application.git
+  ```
+- Step inside & copy your own `.env`:
+  ```bash
+  cd web-application
+  cp .env.example .env
+  ```
+- Then you need to install dependencies inside the [sail](https://laravel.com/docs/11.x/sail) container via [composer](https://getcomposer.org/)
+  ```bash
+  docker run --rm \
+      -u "$(id -u):$(id -g)" \
+      -v "$(pwd):/var/www/html" \
+      -w /var/www/html \
+      laravelsail/php83-composer:latest \
+      composer install --ignore-platform-reqs
+  ```
+- Now we need to up the containers and generate secret key for our application:
+  ```bash
+  ./vendor/bin/sail up -d
+  ./vendor/bin/sail artisan key:generate
+  ```
+- That's all folks! You can find the app at:  
+  http://0.0.0.0/
+
+
+## Usage in development
+- [Everyday up & down](#everyday-up-&-down)
+- [Code Style Check & Fix](#code-style-check-&-fix)
+- [Control Code Quality](#control-code-quality)
+
+### Everyday up & down
+- For the up containers use:
+    - `./vendor/bin/sail up` - to see the logs
+    - or `./vendor/bin/sail up -d` - to execute in background
+- If you up containers in background use
+    - `./vendor/bin/sail down` - to stop them
+
+### Code Style Check & Fix
+We use [PHP-CS-Fixer](https://cs.symfony.com/) for control Code Style.
+Package [`php-cs-fixer`](https://packagist.org/packages/friendsofphp/php-cs-fixer) installed locally in the project, so you can check style with:
+- if you have php installed locally:
+    - `vendor/bin/php-cs-fixer check --diff` - for just check
+    - or `./vendor/bin/php-cs-fixer fix` - if you trust this tool :)
+- or the same commands inside container:
+    - `vendor/bin/sail php vendor/bin/php-cs-fixer check --diff`
+    - `vendor/bin/sail php vendor/bin/php-cs-fixer fix`
+
+For more use `--help` & [documentation](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer?tab=readme-ov-file#documentation).  
+You can enable support for your IDE. It will alert you to problems on the fly.
+
+### Control Code Quality
+We use [PHPStan](https://phpstan.org/) for code quality control.
+Package [`phpstan`](https://packagist.org/packages/phpstan/phpstan) installed locally in the project, so just:
+- `vendor/bin/phpstan analyse` or
+- `vendor/bin/sail php vendor/bin/phpstan analyse`
+
+Also see the [Documentation](https://phpstan.org/user-guide/getting-started).  
+Config for all developers we store in `phpstan.neon.dist`. Also, it's used in CI.  
+If you want to add some your own settings (for ex. for your IDE), create `phpstan.neon` with similar lines:
+```yaml
+includes:
+  - phpstan.neon.dist
+
+parameters:
+  editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+```
+See examples in docs: [Output Format](https://phpstan.org/user-guide/output-format#opening-file-in-an-editor).  
+Also look at [helpful extensions](https://phpstan.org/user-guide/extension-library#official-extensions).
 
 ## About Laravel
 
@@ -28,39 +103,3 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
