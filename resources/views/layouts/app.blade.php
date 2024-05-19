@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Minetest Server' }} - L.O.R.D.</title>
+    <title>@yield('title', 'Minetest Server') - L.O.R.D.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7.2/css/all.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
@@ -57,7 +57,13 @@
 
 
 <main class="container-fluid">
-    @yield('jumbotron')
+    @section('jumbotron')
+        <div class="jumbotron reduced">
+            <div class="center">
+                <h1>@yield('title')</h1>
+            </div>
+        </div>
+    @show
     <div class="content">
         @yield('content')
     </div>
