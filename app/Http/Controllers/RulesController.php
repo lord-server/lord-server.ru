@@ -11,8 +11,13 @@ class RulesController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request): View
+    public function forPlayers(Request $request): View
     {
-        return view('rules');
+        return view('rules.for-players');
+    }
+
+    public function forClans(): View
+    {
+        return view('rules.for-clans');
     }
 }
