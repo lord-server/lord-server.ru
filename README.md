@@ -31,8 +31,13 @@ Official [website](http://lord-server.ru/) of Russian L.O.R.D. server for Minete
   ```
 - Now we need to up the containers and generate secret key for our application:
   ```bash
-  ./vendor/bin/sail up -d
-  ./vendor/bin/sail artisan key:generate
+  vendor/bin/sail up -d
+  vendor/bin/sail artisan key:generate
+  ```
+- For use the latest frontend install dependencies & build it:
+  ```bash
+  vendor/bin/sail npm install
+  vendor/bin/sail npm run build
   ```
 - That's all folks! You can find the app at:  
   http://0.0.0.0/
@@ -44,11 +49,20 @@ Official [website](http://lord-server.ru/) of Russian L.O.R.D. server for Minete
 - [Control Code Quality](#control-code-quality)
 
 ### Everyday up & down
+#### Backend:
 - For the up containers use:
-    - `./vendor/bin/sail up` - to see the logs
-    - or `./vendor/bin/sail up -d` - to execute in background
+  - `vendor/bin/sail up` - to see the logs
+  - or `vendor/bin/sail up -d` - to execute in background
 - If you up containers in background use
-    - `./vendor/bin/sail down` - to stop them
+  - `vendor/bin/sail down` - to stop them
+#### Frontend:
+- For just build the latest version (for ex. after switch between branches or pul new commits):
+  ```bash
+  ./vendor/bin/sail npm install
+  ./vendor/bin/sail npm run build
+  ```
+- For frontend developing & get changes on the fly:
+  - `vendor/bin/sail npm run dev`
 
 ### Code Style Check & Fix
 We use [PHP-CS-Fixer](https://cs.symfony.com/) for control Code Style.
