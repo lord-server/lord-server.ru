@@ -9,6 +9,7 @@
 .env
 .env.backup
 .env.production
+.env.production.decryption-key
 .phpunit.result.cache
 auth.json
 npm-debug.log
