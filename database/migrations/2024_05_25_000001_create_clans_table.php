@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('title', 64);
             $table->string('about', 350)->nullable();
             $table->text('description')->nullable();
-            $table->foreignId('leader_id')->constrained('players');
-            $table->foreignId('negotiator_id')->constrained('players');
+            $table->foreignId('leader_id')->unique()->constrained('players');
+            $table->foreignId('negotiator_id')->unique()->constrained('players');
             $table->timestamps();
         });
 

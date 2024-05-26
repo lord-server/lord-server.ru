@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Database table `players` representation Model.
@@ -17,8 +18,18 @@ use Illuminate\Database\Eloquent\Model;
  * @property int         $clan_id    ID of the Clan, in which the Player is.
  * @property Carbon      $createdAt  when db-record was created (automatically fills).
  * @property Carbon      $updatedAt  when db-record was updated (automatically updates).
+ *
+ * @property-read Clan   $clan `Clan`, in which the Player is.
  */
 class Player extends Model
 {
     use HasFactory;
+
+    /**
+     * @return BelongsTo
+     */
+    public function clan(): BelongsTo
+    {
+        return $this->belongsTo(Clan::class);
+    }
 }
