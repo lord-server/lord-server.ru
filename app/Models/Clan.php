@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Database table `clans` representation Model.
@@ -28,6 +29,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class Clan extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
     /**
      * @return HasOne

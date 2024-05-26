@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('leader_id')->unique()->constrained('players');
             $table->foreignId('negotiator_id')->unique()->constrained('players');
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::table('players', function (Blueprint $table) {
