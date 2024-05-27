@@ -23,7 +23,7 @@ body {
 	font-family: "Titillium Web Regular", Arial, sans-serif;
 }
 
-p, li {
+p, li, td {
 	font-size: 1.7rem;
 }
 
@@ -82,4 +82,18 @@ code {
   display: block;
   height: 60px;
   margin: -60px 0 0;
+}
+
+.label-small {
+	font-size: 70%;
+	padding: .05em .6em .1em;
+}
+
+.pagination > .active > span {
+	background-color: hsl(100, 35%, 55%);
+	border-color: hsl(100, 35%, 45%);
+}
+.pagination > .active > span:hover {
+	background-color: hsl(100, 35%, 45%);
+	border-color: hsl(100, 35%, 35%);
 }
