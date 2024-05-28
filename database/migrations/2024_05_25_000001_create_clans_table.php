@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('clans', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 32);
+            $table->string('name', 32)->unique();
             $table->string('title', 64);
             $table->string('about', 350)->nullable();
             $table->text('description')->nullable();

@@ -14,12 +14,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string      $name       player MT account name.
  * @property Player\Race $race       the race of the player (one of enum Player\Race::< cases >).
  * @property int         $experience experience score of the Player, gained in the game.
- * @property Carbon      $last_login  date & time, when player was latest logged in the game.
+ * @property Carbon      $last_login date & time, when player was latest logged in the game.
  * @property int         $clan_id    ID of the Clan, in which the Player is.
- * @property Carbon      $createdAt  when db-record was created (automatically fills).
- * @property Carbon      $updatedAt  when db-record was updated (automatically updates).
+ * @property Carbon      $created_at when db-record was created (automatically fills).
+ * @property Carbon      $updated_at when db-record was updated (automatically updates).
  *
- * @property-read Clan   $clan `Clan`, in which the Player is.
+ * @property-read Clan   $clan       `Clan`, in which the Player is.
  *
  * @method static Player\Builder query()
  *
@@ -30,6 +30,26 @@ class Player extends Model
     use HasFactory;
 
     /**
+     * The attributes that are mass assignable. For ex.: in API Controller via $player->fill()
+     *
+     * @var array
+     */
+    protected $fillable = ['race', 'experience', 'last_login'];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'last_login' => 'datetime:Y-m-d H:i:s',
+        'created_at' => 'datetime:Y-m-d H:i:s',
+        'updated_at' => 'datetime:Y-m-d H:i:s',
+    ];
+
+    /**
+     * Create a new belongs to relationship. (One to many)
+     *
      * @return BelongsTo
      */
     public function clan(): BelongsTo

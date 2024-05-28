@@ -1,19 +1,26 @@
-/.php-cs-fixer.cache
-/.phpunit.cache
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
 .env
 .env.backup
 .env.production
 .env.production.decryption-key
+
+# === BACKEND ===
+/vendor
+/storage/*.key
+/.php-cs-fixer.cache
+/.phpunit.cache
 .phpunit.result.cache
-auth.json
+_ide_helper.php
+
+# === FRONTEND ===
+/node_modules
+/public/build
+/public/hot
+/public/storage
 npm-debug.log
 yarn-error.log
+
+# other
+auth.json
 /.fleet
 /.idea
 /.vscode

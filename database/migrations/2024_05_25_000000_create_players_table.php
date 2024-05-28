@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id()->primary();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->enum('race', ['human', 'elf', 'hobbit', 'dwarf', 'orc', 'shadow']);
             $table->integer('experience')->default(0);
             $table->timestamp('last_login')->useCurrent();
