@@ -30,7 +30,7 @@ class Player extends Model
     use HasFactory;
 
     /**
-     * The attributes that are mass assignable. For ex.: in API Controller via $player->fill()
+     * The attributes that are mass assignable. For ex.: in API Controller via `$player->fill()`
      *
      * @var array
      */

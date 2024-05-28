@@ -32,6 +32,23 @@ class Clan extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that are mass assignable. For ex.: in API Controller via `$clan->fill()`
+     *
+     * @var array
+     */
+    protected $fillable = ['title','about','description','negotiator_id'];
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d H:i:s',
+        'updated_at' => 'datetime:Y-m-d H:i:s',
+        'deleted_at' => 'datetime:Y-m-d H:i:s',
+    ];
+
+    /**
      * @return HasOne
      */
     public function leader(): HasOne
