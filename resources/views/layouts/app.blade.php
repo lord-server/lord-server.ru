@@ -1,5 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
+/** @var User $user */
+$user = Auth::user();
+
+?><!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -50,6 +57,18 @@
                 <li><a href="https://www.youtube.com/channel/UCVULgQLzFwXdwG02zoJOfIg" target="_blank">
                         <i class="fab fa-youtube"></i>
                     </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right user-menu">
+                @auth
+                    <li class="logged-in">
+                        <a href="#">
+                            <img src="<?= $user->discord_avatar ?>" class="img-circle" style="width: 32px; height: 32px;" alt="ava">
+                            <?= $user->name ?>
+                        </a>
+                    </li>
+                @else
+                    <li><a href="/auth/redirect">Войти</a></li>
+                @endauth
             </ul>
         </div>
     </div>

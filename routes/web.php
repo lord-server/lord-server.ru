@@ -9,3 +9,6 @@ Route::get('/map', \App\Http\Controllers\MapController::class);
 Route::get('/players', \App\Http\Controllers\PlayersController::class);
 Route::get('/clans', \App\Http\Controllers\ClansController::class);
 Route::get('/videos', \App\Http\Controllers\VideosController::class);
+
+Route::get('/auth/redirect', [\App\Http\Controllers\AuthController::class, 'redirect']);
+Route::get('/auth/comeback', [\App\Http\Controllers\AuthController::class, 'comeback']);

@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property int         $clan_id    ID of the Clan, in which the Player is.
  * @property Carbon      $created_at when db-record was created (automatically fills).
  * @property Carbon      $updated_at when db-record was updated (automatically updates).
- *
  * @property-read Clan   $clan       `Clan`, in which the Player is.
  *
  * @method static Player\Builder query()
@@ -30,7 +29,7 @@ class Player extends Model
     use HasFactory;
 
     /**
-     * The attributes that are mass assignable. For ex.: in API Controller via `$player->fill()`
+     * The attributes that are mass assignable. For ex.: in API Controller via `$player->fill()`.
      *
      * @var array
      */
@@ -48,7 +47,7 @@ class Player extends Model
     ];
 
     /**
-     * Create a new belongs to relationship. (One to many)
+     * Create a new belongs to relationship. (One to many).
      *
      * @return BelongsTo
      */

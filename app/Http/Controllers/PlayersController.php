@@ -25,7 +25,7 @@ class PlayersController extends Controller
         ;
 
         return view('players', [
-            'players' => $players
+            'players' => $players,
         ]);
     }
 }

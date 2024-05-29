@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models\Player;
 
 enum Race: string

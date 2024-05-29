@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    /***************   OUR   ***************/
+    'discord' => [
+        'client_id'     => env('DISCORD_CLIENT_ID'),
+        'client_secret' => env('DISCORD_CLIENT_SECRET'),
+        'redirect'      => '/auth/comeback',
+        // optional
+        'allow_gif_avatars' => true,
+        'avatar_default_extension' => 'png', // only pick from jpg, png, webp
+    ],
 ];

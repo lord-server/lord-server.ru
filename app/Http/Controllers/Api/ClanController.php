@@ -45,7 +45,7 @@ class ClanController
      */
     public function update(Request $request, Clan $clan): Clan
     {
-        $attributes = $request->only(['title','about','description','negotiator_id']);
+        $attributes = $request->only(['title', 'about', 'description', 'negotiator_id']);
         $clan->fill($attributes);
         $clan->save();
 
