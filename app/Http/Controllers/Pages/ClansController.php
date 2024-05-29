@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pages;
 
 use App\Http\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class VideosController extends Controller
+class ClansController extends Controller
 {
     /**
-     * Handle `/videos` request.
+     * Handle `/map` request.
      *
      * @param Request $request
      *
@@ -17,6 +17,6 @@ class VideosController extends Controller
      */
     public function __invoke(Request $request): View
     {
-        return view('videos');
+        return view('clans');
     }
 }
