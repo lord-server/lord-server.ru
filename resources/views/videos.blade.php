@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'Видео')
+
 
 @section('content')
 <h2 class="center">Минас Тирит</h2>

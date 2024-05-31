@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'Кланы сервера')
+
 
 @section('content')
 <h2></h2>

@@ -66,8 +66,18 @@ class Player extends Model
         return new Player\Builder($query);
     }
 
-    public function getDates()
+    /**
+     * @param Clan $clan
+     *
+     * @return bool
+     */
+    public function isLeaderOf(Clan $clan): bool
     {
-        return ['last_login'];
+        return $this->id === $clan->leader_id;
+    }
+
+    public function isNegotiatorOf(Clan $clan): bool
+    {
+        return $this->id === $clan->negotiator_id;
     }
 }

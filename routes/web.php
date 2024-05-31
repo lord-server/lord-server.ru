@@ -12,6 +12,7 @@ Route::get('/clans-rules', [Pages\RulesController::class, 'forClans']);
 Route::get('/map', Pages\MapController::class);
 Route::get('/players', Pages\PlayersController::class);
 Route::get('/clans', Pages\ClansController::class);
+Route::get('/clans-new', Pages\ClansNewController::class);
 Route::get('/videos', Pages\VideosController::class);
 
 Route::get('/auth/redirect', [AuthController::class, 'redirect']);

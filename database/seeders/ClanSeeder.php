@@ -17,7 +17,6 @@ class ClanSeeder extends Seeder
     public function run(): void
     {
         Clan::factory()
-            ->has(Player::factory()->count(random_int(7, 10)))
             ->count(5)
             ->create()
         ;

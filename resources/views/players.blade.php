@@ -1,13 +1,14 @@
 <?php
 use App\Models\Player;
 use Illuminate\Pagination\LengthAwarePaginator;
+
+
 /** @var $players Player[]|LengthAwarePaginator */
 
 $position = $players->firstItem();
+
 ?>
-
 @extends('layouts.app')
-
 @section('title', 'Игроки')
 
 @section('content')

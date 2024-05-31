@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'Карта нашего мира')
+
 
 @section('content')
 <h2></h2>

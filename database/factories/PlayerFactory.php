@@ -21,7 +21,7 @@ class PlayerFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->userName(),
+            'name' => fake()->unique()->userName(),
             'race' => Arr::random(Player\Race::cases()),
             'last_login' => fake()->dateTimeBetween('-120 days'),
         ];
