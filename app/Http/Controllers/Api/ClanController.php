@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\ClanResource;
 use App\Models\Clan;
+use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Response;
 
 class ClanController
 {
@@ -20,14 +22,19 @@ class ClanController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): Clan
+    public function store(Request $request): Clan|Response
     {
-        $clan                = new Clan();
-        $clan->name          = $request->get('name');
-        $clan->title         = $request->get('title');
-        $clan->leader_id     = $request->get('leader_id');
-        $clan->negotiator_id = $request->get('negotiator_id');
-        $clan->save();
+        try {
+            $attributes = $request->only(['name','title','leader_id','negotiator_id']);
+            if ( ! isset($attributes['negotiator_id'])) {
+                $attributes['negotiator_id'] = $attributes['leader_id'];
+            }
+
+            $clan = (new Clan())->fill($attributes);
+            $clan->save();
+        } catch (UniqueConstraintViolationException) {
+            return response(status: 409);
+        }
 
         return $clan;
     }

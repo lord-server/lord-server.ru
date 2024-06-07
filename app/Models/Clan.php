@@ -36,7 +36,7 @@ class Clan extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'about', 'description', 'negotiator_id'];
+    protected $fillable = ['name', 'title', 'about', 'description', 'leader_id', 'negotiator_id'];
     /**
      * The attributes that should be cast.
      *
