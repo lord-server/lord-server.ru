@@ -84,6 +84,27 @@ $user = Auth::user();
         </div>
     @show
     <div class="content">
+        @if (session('success'))
+            <div class="alert alert-success">
+                <strong><?= __('messages.Well done!') ?></strong> <?= session('success') ?>
+            </div>
+        @endif
+        @if (session('info'))
+            <div class="alert alert-info">
+                <strong><?= __('messages.Info:') ?></strong> <?= session('info') ?>
+            </div>
+        @endif
+        @if (session('warning'))
+            <div class="alert alert-warning">
+                <strong><?= __('messages.Warning!') ?></strong> <?= session('warning') ?>
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">
+                <strong><?= __('messages.Error!') ?></strong> <?= session('error') ?>
+            </div>
+        @endif
+
         @yield('content')
     </div>
 </main>
