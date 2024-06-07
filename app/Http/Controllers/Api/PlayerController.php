@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\PlayerResource;
 use App\Models\Player;
+use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Response;
 
 class PlayerController
 {
@@ -20,12 +22,16 @@ class PlayerController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): Player
+    public function store(Request $request): Player|Response
     {
-        $player       = new Player();
-        $player->name = $request->get('name');
-        $player->race = $request->get('race');
-        $player->save();
+        try {
+            $player       = new Player();
+            $player->name = $request->get('name');
+            $player->race = $request->get('race');
+            $player->save();
+        } catch (UniqueConstraintViolationException) {
+            return response(status: 409);
+        }
 
         return $player;
     }
