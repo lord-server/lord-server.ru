@@ -14,4 +14,15 @@ return [
     'Failed to login'          => 'Failed to login',
     'Can\'t get Discord token' => 'Can\'t get Discord token',
     'Internal server error'    => 'Internal server error',
+    //--------------------------------------------------------------------------
+    // Header & Jumbotron
+    //--------------------------------------------------------------------------
+    'About Server'             => 'About Server',
+    'Play'                     => 'Play',
+
+
+    //--------------------------------------------------------------------------
+    // On Pages messages
+    //--------------------------------------------------------------------------
+    'Others'                   => 'Others',
 ];

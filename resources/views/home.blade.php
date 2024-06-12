@@ -4,9 +4,16 @@
     <div class="jumbotron">
         <div class="center">
             <h1>L.O.R.D.</h1>
-            <p>Русскоязычный сервер Minetest в стиле Властелина Колец</p>
-            <p>Open source проект.</p>
-            <p><a class="btn btn-success btn-lg" href="https://www.minetest.net/downloads/" target="_blank">Скачать</a></p>
+            <p>
+                Российский сервер Minetest по мотивам легендариума Дж. Толкина ("Властелин Колец", "Хоббит",..), где игроки —
+                кто поодиночке, кто в дружине, кто в клане — пишут историю нашего сервера:
+                трудятся, отдыхают, торгуют, сражаются...<br>
+                Словом, поодиночке или с друзьями проявляют свою доблесть!
+            </p>
+            <p>
+                <a class="btn btn-success btn-lg" href="/about"><?= __('messages.About Server') ?></a>
+                <a class="btn btn-success btn-lg" href="/play"><?= __('messages.Play') ?></a>
+            </p>
         </div>
     </div>
 @endsection
@@ -68,5 +75,8 @@
 
     <h2 class="center">PvP-Турнир</h2>
 
-    <iframe src="https://challonge.com/lord_pvp_2021_i/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    <iframe src="https://challonge.com/lord_pvp_2021_i/module"
+            width="100%" height="500"
+            frameborder="0" scrolling="auto" allowtransparency="true">
+    </iframe>
 @endsection

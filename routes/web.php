@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Pages;
 
 Route::get('/', HomeController::class);
+Route::get('/about', Pages\AboutController::class);
+Route::get('/play', Pages\PlayController::class);
 Route::get('/rules', [Pages\RulesController::class, 'forPlayers']);
 Route::get('/clans-rules', [Pages\RulesController::class, 'forClans']);
 Route::get('/map', Pages\MapController::class);

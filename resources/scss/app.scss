@@ -1,5 +1,6 @@
 // Global stytes
 
+@import "variables";
 @import "fonts";     // Fonts (currently Titillium Web)
 @import "navbar";    // Navigation bar
 @import "content";   // Content margins
@@ -21,6 +22,7 @@ body {
 	color: #333;
 	cursor: default;
 	font-family: "Titillium Web Regular", Arial, sans-serif;
+	font-size: 1.7rem;
 }
 
 p, li, td {
@@ -56,6 +58,10 @@ code {
 	border: 1px solid #ccc;
 	color: #333;
 }
+code, .colored {
+	color: $main-color
+}
+
 
 .intro {
 	margin-top: 5rem;
@@ -74,9 +80,6 @@ code {
 	width: 100%;
 }
 
-.inline {
-	display: inline;
-}
 :target:before {  // Adjust anchor link location to not cover titles with header
   content: "";
   display: block;
