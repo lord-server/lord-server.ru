@@ -1,0 +1,20 @@
+
+
+.label-clan-member, .label-keeper, .label-squad {
+    background-color: $role-bg-color;
+    font-weight: bold !important;
+    border: .25rem solid;
+    border-radius: 6px;
+    padding: 4px 10px 5px;
+}
+
+.label-clan-member {
+    color: $role-color-clan-member;
+}
+.label-keeper {
+    color: $role-color-keeper;
+}
+
+.label-squad {
+    color: $role-color-squad;
+}

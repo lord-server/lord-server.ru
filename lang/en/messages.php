@@ -25,4 +25,17 @@ return [
     // On Pages messages
     //--------------------------------------------------------------------------
     'Others'                   => 'Others',
+    // Spawns:
+    'spawns'                   => [
+        'Orcish'  => 'Orcish',
+        'Human'   => 'Human',
+        'Hobbit'  => 'Hobbit',
+        'Elven'   => 'Elven',
+        'Dwarven' => 'Dwarven',
+        'Central' => 'Central',
+    ],
+    'spawn'                    => [
+        'Keepers' => 'Keepers',
+        'Squad'   => 'Squad',
+    ],
 ];

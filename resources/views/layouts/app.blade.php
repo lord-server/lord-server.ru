@@ -45,6 +45,7 @@ $user = Auth::user();
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/rules">Правила</a></li>
+                <li><a href="/spawns">Спауны</a></li>
                 <li><a href="/clans" class="text-danger">Кланы</a></li>
                 <li><a href="/map">Карта</a></li>
                 <li><a href="/videos">Видео</a></li>

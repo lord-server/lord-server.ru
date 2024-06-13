@@ -1,11 +1,12 @@
 // Global stytes
 
 @import "variables";
-@import "fonts";     // Fonts (currently Titillium Web)
-@import "navbar";    // Navigation bar
-@import "content";   // Content margins
-@import "jumbotron"; // Jumbotron
-@import "footer";    // Footer (copyright information, link to GitHub)
+@import "fonts";
+@import "navbar";
+@import "jumbotron";
+@import "footer";
+@import "roles";
+@import "content";
 
 ::-moz-selection {
 	background-color: hsl(100, 35%, 45%);
