@@ -37,8 +37,8 @@
                         <b><?= __('messages.spawn.Squad') ?>:</b>
                         <div>
                             <b class="label label-squad">@Semi</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
+                            <b class="label label-squad">@TheWoLFrAm</b>
+                            <b class="label label-squad">@Vldslv</b>
                         </div>
                     </p>
                 </div>
