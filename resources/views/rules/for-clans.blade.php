@@ -9,7 +9,7 @@
         <li role="tab" class="active"><a href="/clans-rules">Правила кланов</a></li>
     </ul>
 
-    <div class="tab-content">
+    <div class="panel panel-body rules-canvas">
 
         <h2>Создание клана:</h2>
         <h3>Требования к клану:</h3>

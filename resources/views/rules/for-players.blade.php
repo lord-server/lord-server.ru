@@ -9,7 +9,7 @@
             <li role="tab"><a href="/clans-rules">Правила кланов</a></li>
         </ul>
 
-        <div class="tab-content">
+        <div class="panel panel-body rules-canvas">
             <h2>I. Права Игроков:</h2>
             <ul class="media-list">
                 <li><b>1.1.</b> Каждый Игрок сервера [RU] L.O.R.D. имеет право на личное мнение и взгляды.</li>
