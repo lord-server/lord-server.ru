@@ -137,9 +137,9 @@ $user = Auth::user();
             </div>
 
             <div class="col-xs-4 col-sm-3 mx-auto">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Разработка</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><?= __('messages.Development') ?></h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://github.com/lord-server/lord" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/lord-server/lord" target="_blank">GitHub</a></li>
                     <li><a href="https://github.com/lord-server/lord/issues" target="_blank">Issues</a></li>
                 </ul>
             </div>

@@ -5,10 +5,7 @@
         <div class="center">
             <h1>L.O.R.D.</h1>
             <p>
-                Российский сервер Minetest по мотивам легендариума Дж. Толкина ("Властелин Колец", "Хоббит", ...), где игроки —
-                кто поодиночке, кто в дружине, кто в клане — пишут историю нашего сервера:
-                трудятся, отдыхают, торгуют, сражаются...<br>
-                Словом, поодиночке или с друзьями проявляют свою доблесть!
+                <?= __('messages.jumbo.phrase.home') ?>
             </p>
             <p>
                 <a class="btn btn-success btn-lg" href="/about"><?= __('messages.About Server') ?></a>
@@ -19,7 +16,7 @@
 @endsection
 
 @section('content')
-    <h2 class="center">Новости</h2>
+    <h2 class="center"><?= __('messages.News') ?></h2>
 
     <script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
     <script type="text/javascript">VK.init({apiId: 51772316, onlyWidgets: true});</script>
@@ -33,7 +30,7 @@
     </script>
 
 
-    <h2 class="center">Галерея</h2>
+    <h2 class="center"><?= __('messages.Gallery') ?></h2>
 
     <div class="row">
         <div class="col-lg-6">
@@ -62,7 +59,7 @@
     </div>
 
 
-    <h2 class="center">В игре</h2>
+    <h2 class="center"><?= __('messages.In Game') ?></h2>
 
     <widgetbot
             server="268093825975713793"
@@ -73,7 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 
 
-    <h2 class="center">PvP-Турнир</h2>
+    <h2 class="center"><?= __('messages.PvP-Tournament') ?></h2>
 
     <iframe src="https://challonge.com/lord_pvp_2021_i/module"
             width="100%" height="500"
