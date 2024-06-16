@@ -60,7 +60,7 @@
 
 
     <h2 class="center"><?= __('messages.In Game') ?></h2>
-
+    <!--noindex-->
     <widgetbot
             server="268093825975713793"
             channel="284593326370324481"
@@ -68,6 +68,7 @@
             height="600"
     ></widgetbot>
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+    <!--/noindex-->
 
 
     <h2 class="center"><?= __('messages.PvP-Tournament') ?></h2>
