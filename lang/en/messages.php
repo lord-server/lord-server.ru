@@ -19,7 +19,13 @@ return [
     //--------------------------------------------------------------------------
     'About Server'             => 'About Server',
     'Play'                     => 'Play',
-
+    //---- header: ----
+    'Rules'                    => 'Rules',
+    'Spawns'                   => 'Spawns',
+    'Clans'                    => 'Clans',
+    'Map'                      => 'Map',
+    'Videos'                   => 'Videos',
+    'Login'                    => 'Login',
 
     //--------------------------------------------------------------------------
     // On Pages messages

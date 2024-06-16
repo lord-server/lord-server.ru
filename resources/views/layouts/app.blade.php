@@ -44,11 +44,11 @@ $user = Auth::user();
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/rules">Правила</a></li>
-                <li><a href="/spawns">Спауны</a></li>
-                <li><a href="/clans" class="text-danger">Кланы</a></li>
-                <li><a href="/map">Карта</a></li>
-                <li><a href="/videos">Видео</a></li>
+                <li><a href="/rules"><?= __('messages.Rules') ?></a></li>
+                <li><a href="/spawns"><?= __('messages.Spawns') ?></a></li>
+                <li><a href="/clans" class="text-danger"><?= __('messages.Clans') ?></a></li>
+                <li><a href="/map"><?= __('messages.Map') ?></a></li>
+                <li><a href="/videos"><?= __('messages.Videos') ?></a></li>
                 <li><a href="https://vk.com/minetest_lord" target="_blank">
                         <i class="fab fa-vk"></i>
                     </a></li>
@@ -68,7 +68,7 @@ $user = Auth::user();
                         </a>
                     </li>
                 @else
-                    <li><a href="/auth/redirect">Войти</a></li>
+                    <li><a href="/auth/redirect"><?= __('messages.Login') ?></a></li>
                 @endauth
             </ul>
         </div>
