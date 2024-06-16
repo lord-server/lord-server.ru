@@ -19,13 +19,19 @@ return [
     //--------------------------------------------------------------------------
     'About Server'             => 'About Server',
     'Play'                     => 'Play',
-    //---- header: ----
+    //---- header/footer: ----
     'Rules'                    => 'Rules',
     'Spawns'                   => 'Spawns',
     'Clans'                    => 'Clans',
     'Map'                      => 'Map',
     'Videos'                   => 'Videos',
     'Login'                    => 'Login',
+    //---- footer ----
+    'Community'                => 'Community',
+    'VK'                       => 'VK.com',
+    'Lord Server Team'         => 'LORD Server Team',
+    'Sources'                  => 'Sources',
+
 
     //--------------------------------------------------------------------------
     // On Pages messages

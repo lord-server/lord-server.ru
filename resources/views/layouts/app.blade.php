@@ -120,18 +120,19 @@ $user = Auth::user();
             <div class="col-xs-4 col-sm-2 mx-auto">
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">L.O.R.D.</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/rules">Правила</a></li>
-                    <li><a href="https://lord-server.ru/map" target="_blank">Карта</a></li>
-                    <li><a href="https://www.minetest.net/downloads/" target="_blank">Скачать</a></li>
+                    <li><a href="/rules"><?= __('messages.Rules') ?></a></li>
+                    <li><a href="/map" target="_blank"><?= __('messages.Map') ?></a></li>
+                    <li><a href="/about" target="_blank"><?= __('messages.About Server') ?></a></li>
+                    <li><a href="/play" target="_blank"><?= __('messages.Play') ?></a></li>
                 </ul>
             </div>
 
             <div class="col-xs-4 col-sm-3 mx-auto">
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Сообщество</h5>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><?= __('messages.Community') ?></h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://vk.com/minetest_lord" target="_blank">ВКонтакте</a></li>
                     <li><a href="https://www.discord.gg/uTX3mbb" target="_blank">Discord</a></li>
-                    <li><a href="https://wiki.minetest.net/Crafting/ru" target="_blank">Основы крафта</a></li>
+                    <li><a href="https://vk.com/minetest_lord" target="_blank"><?= __('messages.VK') ?></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCVULgQLzFwXdwG02zoJOfIg" target="_blank">YouTube</a></li>
                 </ul>
             </div>
 
@@ -148,8 +149,8 @@ $user = Auth::user();
         </div>
     </div>
     <div class="footer-copyright text-center py-3">
-        © {{ \Carbon\Carbon::now()->year }} Команда сервера LORD.
-        <a href="https://github.com/lord-server/lord-server.ru" target="_blank">Исходники</a>
+        © {{ \Carbon\Carbon::now()->year }} <?= __('messages.Lord Server Team') ?>.
+        <a href="https://github.com/lord-server/lord-server.ru" target="_blank"><?= __('messages.Sources') ?></a>
     </div>
 
 </footer>
