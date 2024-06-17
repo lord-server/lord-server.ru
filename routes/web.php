@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
@@ -20,3 +22,12 @@ Route::get('/videos', Pages\VideosController::class);
 
 Route::get('/auth/redirect', [AuthController::class, 'redirect']);
 Route::get('/auth/comeback', [AuthController::class, 'comeback']);
+
+
+Route::get('/choose-locate/{locale}', function (string $locale) {
+    if ( ! in_array($locale, Config::get('app.locale_available'))) {
+        $locale = Config::get('locale');
+    }
+
+    return Redirect::back()->withCookie(cookie('lang', $locale));
+});

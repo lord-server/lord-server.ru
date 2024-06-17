@@ -1,6 +1,7 @@
 <?php
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;use Illuminate\Support\Facades\Config;
 
 /** @var User $user */
 $user = Auth::user();
@@ -59,7 +60,18 @@ $user = Auth::user();
                         <i class="fab fa-youtube"></i>
                     </a></li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right user-menu">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="choose-lang" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?= App::getLocale() ?> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="choose-lang">
+                        <?php foreach (Config::get('app.locale_available') as $lang): ?>
+                        <li><a href="/choose-locate/<?= $lang ?>"><?= $lang ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
                 @auth
                     <li class="logged-in">
                         <a href="#">
@@ -155,8 +167,6 @@ $user = Auth::user();
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
