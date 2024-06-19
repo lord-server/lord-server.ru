@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title', 'Спауны')
+@section('title', __('messages.Spawns'))
 
 @section('jumbotron')
     <div class="jumbotron">
         <div class="center">
             <h1>@yield('title')</h1>
             <p>
-                Сегодня мой сто одиннадцатый день рождения. Увы, сто одиннадцать лет — это слишком мало, когда живёшь среди таких чудесных и славных хоббитов.
+                <?= __('messages.jumbo.phrase.spawns') ?>
             </p>
         </div>
     </div>
@@ -14,7 +14,7 @@
 
 
 @section('content')
-    <h2 class="center">Где рождаются игроки</h2>
+    <h2 class="center"><?= __('messages.Where players are born') ?></h2>
 
     <div class="row">
         <div class="col-xs-12 col-lg-6">
@@ -27,14 +27,14 @@
                         <img class="img-responsive" src="img/spawns/orcish.png" alt="Orcish Spawn">
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@Lester_Grazziano</b>
                             <b class="label label-keeper">@SuperKate</b>
                         </div>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Squad') ?>:</b>
+                        <b><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-squad">@Semi</b>
                             <b class="label label-squad">@TheWoLFrAm</b>
@@ -54,18 +54,18 @@
                         <img class="img-responsive" src="img/spawns/human.png" alt="Human Spawn">
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@VladTs</b>
                             <b class="label label-keeper">@Pilsner</b>
                         </div>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Squad') ?>:</b>
+                        <b><?= __('messages.roles.Squad') ?>:</b>
                         <div>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                         </div>
                     </p>
                 </div>
@@ -80,21 +80,21 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <i>&lt;активно строится, скоро запуск&gt;</i>
+                        <i>&lt;<?= __('messages.actively-builds') ?>&gt;</i>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@Shishka</b>
-                            <b class="label label-keeper">&lt;вакансия&gt;</b>
+                            <b class="label label-keeper">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                         </div>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Squad') ?>:</b>
+                        <b><?= __('messages.roles.Squad') ?>:</b>
                         <div>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
-                            <b class="label label-squad">&lt;вакансия&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                         </div>
                     </p>
                 </div>
@@ -107,21 +107,21 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <i class="text-muted">&lt;запланирован&gt;</i>
+                        <i class="text-muted">&lt;<?= __('messages.planned') ?>&gt;</i>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Squad') ?>:</b>
+                        <b><?= __('messages.roles.Squad') ?>:</b>
                         <div>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
                     </p>
                 </div>
@@ -136,13 +136,13 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <i class="text-muted">&lt;запланирован&gt;</i>
+                        <i class="text-muted">&lt;<?= __('messages.planned') ?>&gt;</i>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
-                            <b class="label label-default text-muted">&lt;вакансия-позже&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
                     </p>
                 </div>
@@ -158,7 +158,7 @@
                         <code>/center</code>
                     </p>
                     <p>
-                        <b><?= __('messages.spawn.Keepers') ?>:</b>
+                        <b><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@VladTs</b>
                             <b class="label label-keeper">@Alek</b>
