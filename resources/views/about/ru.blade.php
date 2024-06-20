@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('title', 'О сервере')
+@section('title', __('messages.About Server'))
 
 @section('jumbotron')
     <div class="jumbotron">
         <div class="center">
             <h1>@yield('title')</h1>
             <p>
-                Даже самый маленький человек способен изменить ход будущего
+                <?= __('messages.jumbo.phrase.about') ?>
                 <!-- Найти друга мало, нужно еще спасти его. -->
             </p><p>
                 <a class="btn btn-success btn-lg" href="/play"><?= __('messages.Play') ?></a>
@@ -112,7 +112,7 @@
             Вы уже разабрались во всём?
         </p><p>
             Поучаствовали в строительстве, повоевали в расовых дружинах, завалили кучу <strong>Назгулов</strong> и
-            <strong>Барлогов</strong>? И теперь хотите организовать свой собственнй движ?
+            <strong>Балрогов</strong>? И теперь хотите организовать свой собственнй движ?
         </p><p>
             Может быть вы захотите зарегистрировать свой <strong>Клан</strong>, который
             ступит на тропу новых приключений...

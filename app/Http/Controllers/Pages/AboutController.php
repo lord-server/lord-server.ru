@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 use App\Http\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class AboutController extends Controller
 {
@@ -14,6 +15,6 @@ class AboutController extends Controller
      */
     public function __invoke(Request $request): View
     {
-        return view('about');
+        return view('about.' . App::getLocale());
     }
 }

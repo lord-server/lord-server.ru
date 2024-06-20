@@ -54,6 +54,7 @@ return [
                 It’s a dangerous business, Frodo, going out of your door.
                 You step into the Road, and if you don’t keep your feet,
                 there is no knowing where you might be swept off too.',
+            'about'  => 'Even the smallest person can change the course of the future.',
         ],
     ],
 
