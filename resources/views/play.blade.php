@@ -1,9 +1,13 @@
+<?php
+use Illuminate\Support\Facades\App;
+
+?>
 @extends('layouts.app')
-@section('title', 'Как поиграть')
+@section('title', __('messages.How to play'))
 
 
 @section('content')
-    <h2>Скачайте Minetest</h2>
+    <h2><?= __('messages.Download Minetest') ?></h2>
 
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-lg-3">
@@ -47,7 +51,8 @@
                 <div class="panel-body">
                     <strong><?= __('messages.Others') ?></strong>
                     <a target="_blank" href="https://www.minetest.net/downloads/">
-                        <img alt="MT" class="fa" src="https://www.minetest.net/media/icon.svg" width="20" height="20"/> Minetest Download
+                        <img alt="MT" class="fa" src="https://www.minetest.net/media/icon.svg" width="20" height="20"/>
+                        Minetest Download Page
                     </a>
                 </div>
             </div>
@@ -55,17 +60,23 @@
     </div>
 
 
-    <h2>Запустите и найдите сервер L.O.R.D.</h2>
+    <h2><?= __('messages.Launch & find LORD') ?></h2>
     <ul>
         <li>
-            Откройте вкладку <strong class="colored">"Подключиться к игре"</strong>
+            <?= sprintf(
+                __('messages.Open the %s tab'),
+                '<strong class="colored">"' . __('messages.Join Game') . '"</strong>'
+            ) ?>
         </li><li>
-            Наберите в поиске <strong class="colored">"lord"</strong> или <strong class="colored">"lotr"</strong>,
-            нажмите <i class="fa fa-search"></i>
+            <?= sprintf(
+                __('messages.Type %s or %s in the search and click'),
+                '<strong class="colored">"lord"</strong>',
+                '<strong class="colored">"lotr"</strong>'
+            ) ?> <i class="fa fa-search colored"></i>
         </li>
     </ul>
     <p>
-        <img class="img-responsive" src="img/play/find-server-lord.png" alt="find and connect to Minetest server LORD">
+        <img class="img-responsive" src="img/play/find-server-lord.<?= App::getLocale() ?>.png" alt="find and connect to Minetest server LORD">
     </p>
 
     <h2 class="center">

@@ -4,36 +4,36 @@ return [
     //--------------------------------------------------------------------------
     // Alerts prefixes (Layout)
     //--------------------------------------------------------------------------
-    'Well done!'               => 'Well done!',
-    'Warning!'                 => 'Warning!',
-    'Info:'                    => 'Info:',
-    'Error!'                   => 'Error!',
+    'Well done!'                            => 'Well done!',
+    'Warning!'                              => 'Warning!',
+    'Info:'                                 => 'Info:',
+    'Error!'                                => 'Error!',
     //--------------------------------------------------------------------------
     // Alerts messages
     //--------------------------------------------------------------------------
-    'Failed to login'          => 'Failed to login',
-    'Can\'t get Discord token' => 'Can\'t get Discord token',
-    'Internal server error'    => 'Internal server error',
+    'Failed to login'                       => 'Failed to login',
+    'Can\'t get Discord token'              => 'Can\'t get Discord token',
+    'Internal server error'                 => 'Internal server error',
     //--------------------------------------------------------------------------
     // Header & Jumbotron
     //--------------------------------------------------------------------------
-    'About Server'             => 'About Server',
-    'Play'                     => 'Play',
+    'About Server'                          => 'About Server',
+    'Play'                                  => 'Play',
     //---- header/footer: ----
-    'Rules'                    => 'Rules',
-    'Spawns'                   => 'Spawns',
-    'Clans'                    => 'Clans',
-    'Map'                      => 'Map',
-    'Videos'                   => 'Videos',
-    'Login'                    => 'Login',
+    'Rules'                                 => 'Rules',
+    'Spawns'                                => 'Spawns',
+    'Clans'                                 => 'Clans',
+    'Map'                                   => 'Map',
+    'Videos'                                => 'Videos',
+    'Login'                                 => 'Login',
     //---- footer: ----
-    'Community'                => 'Community',
-    'Development'              => 'Разработка',
-    'VK'                       => 'VK.com',
-    'Lord Server Team'         => 'LORD Server Team',
-    'Sources'                  => 'Sources',
+    'Community'                             => 'Community',
+    'Development'                           => 'Разработка',
+    'VK'                                    => 'VK.com',
+    'Lord Server Team'                      => 'LORD Server Team',
+    'Sources'                               => 'Sources',
     //---- jumbotron: ----
-    'jumbo'                    => [
+    'jumbo'                                 => [
         'phrase' => [
             'home'   => '
                 Russian Minetest server based on the legendarium of J. Tolkien ("The Lord of the Rings", "The Hobbit", ...),
@@ -54,17 +54,17 @@ return [
     // On Pages messages
     //--------------------------------------------------------------------------
     // Home:
-    'News'                     => 'News',
-    'Gallery'                  => 'Gallery',
-    'In Game'                  => 'In Game',
-    'PvP-Tournament'           => 'PvP-Tournament',
+    'News'                                  => 'News',
+    'Gallery'                               => 'Gallery',
+    'In Game'                               => 'In Game',
+    'PvP-Tournament'                        => 'PvP-Tournament',
     // ----
-    'Others'                   => 'Others',
+    'Others'                                => 'Others',
     // Spawns:
-    'Where players are born'   => 'Where players are born',
-    'actively-builds'          => 'actively under construction, launch soon',
-    'planned'                  => 'planned',
-    'spawns'                   => [
+    'Where players are born'                => 'Where players are born',
+    'actively-builds'                       => 'actively under construction, launch soon',
+    'planned'                               => 'planned',
+    'spawns'                                => [
         'Orcish'  => 'Orcish',
         'Human'   => 'Human',
         'Hobbit'  => 'Hobbit',
@@ -72,10 +72,17 @@ return [
         'Dwarven' => 'Dwarven',
         'Central' => 'Central',
     ],
-    'roles'                    => [
+    'roles'                                 => [
         'Keepers'       => 'Keepers',
         'Squad'         => 'Squad',
         'vacancy'       => 'vacancy',
         'vacancy-later' => 'future-vacancy',
     ],
+    // Play
+    'How to play'                           => 'Play on our server',
+    'Download Minetest'                     => 'Download Minetest',
+    'Launch & find LORD'                    => 'Launch MT and find the L.O.R.D server',
+    'Open the %s tab'                       => 'Open the %s tab',
+    'Join Game'                             => 'Join Game',
+    'Type %s or %s in the search and click' => 'Type %s or %s in the search and click',
 ];
