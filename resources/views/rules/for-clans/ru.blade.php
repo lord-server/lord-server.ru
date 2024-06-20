@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Правила кланов')
+@section('title', __('messages.Clans Rules'))
 
 @section('content')
 <div class="row">
     <ul class="nav nav-tabs nav-justified" role="tablist">
-        <li role="tab"><a href="/rules">Общие правила</a></li>
-        <li role="tab" class="active"><a href="/clans-rules">Правила кланов</a></li>
+        <li role="tab"><a href="/rules"><?= __('messages.Common Rules') ?></a></li>
+        <li role="tab" class="active"><a href="/clans-rules"><?= __('messages.Clans Rules') ?></a></li>
     </ul>
 
     <div class="panel panel-body rules-canvas">

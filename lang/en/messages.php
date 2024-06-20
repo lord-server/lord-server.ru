@@ -112,6 +112,10 @@ return [
                     However, its size is complete and you can see where which biomes/rivers/seas are.',
         ],
     ],
+    // Rules
+    'Server Rules'                              => 'Server Rules',
+    'Common Rules'                              => 'Common Rules',
+    'Clans Rules'                               => 'Clans Rules',
 
     // 404
     'Page not found'                            => 'Page not found',
