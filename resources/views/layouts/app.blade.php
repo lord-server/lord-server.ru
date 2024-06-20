@@ -7,10 +7,14 @@ use Illuminate\Support\Facades\Auth;use Illuminate\Support\Facades\Config;
 $user = Auth::user();
 
 ?><!DOCTYPE html>
-<html lang="ru">
+<html lang="<?= App::getLocale() ?>">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <?php foreach (Config::get('app.locale_available') as $lang): ?>
+    <link rel="alternate" hreflang="<?= $lang ?>" href="/choose-locale/<?= $lang ?>" />
+    <?php endforeach; ?>
+    <link rel="alternate" hreflang="x-default" href="/choose-locale/ru" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Minetest Server') - L.O.R.D.</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
@@ -68,7 +72,7 @@ $user = Auth::user();
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="choose-lang">
                         <?php foreach (Config::get('app.locale_available') as $lang): ?>
-                        <li><a href="/choose-locate/<?= $lang ?>"><?= $lang ?></a></li>
+                        <li><a href="/choose-locale/<?= $lang ?>"><?= $lang ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </li>

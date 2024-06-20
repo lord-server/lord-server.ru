@@ -24,7 +24,7 @@ Route::get('/auth/redirect', [AuthController::class, 'redirect']);
 Route::get('/auth/comeback', [AuthController::class, 'comeback']);
 
 
-Route::get('/choose-locate/{locale}', function (string $locale) {
+Route::get('/choose-locale/{locale}', function (string $locale) {
     if ( ! in_array($locale, Config::get('app.locale_available'))) {
         $locale = Config::get('locale');
     }
