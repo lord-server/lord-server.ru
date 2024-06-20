@@ -22,6 +22,7 @@ return [
     //---- header/footer: ----
     'Rules'                                 => 'Rules',
     'Spawns'                                => 'Spawns',
+    'Players'                               => 'Players',
     'Clans'                                 => 'Clans',
     'Map'                                   => 'Map',
     'Videos'                                => 'Videos',
@@ -46,6 +47,13 @@ return [
                 years is far too short a time to live
                 among such excellent and admirable
                 Hobbits! Tremendous outburst of approval!',
+            'clans'  => '
+                — These are Gundabad wargs. They will outrun you!<br>
+                — These are Rhosgobel rabbits. I\'d like to see them try.',
+            'map'    => '
+                It’s a dangerous business, Frodo, going out of your door.
+                You step into the Road, and if you don’t keep your feet,
+                there is no knowing where you might be swept off too.',
         ],
     ],
 
@@ -85,4 +93,23 @@ return [
     'Open the %s tab'                       => 'Open the %s tab',
     'Join Game'                             => 'Join Game',
     'Type %s or %s in the search and click' => 'Type %s or %s in the search and click',
+    // Clans
+    'Server clans'                          => 'Server clans',
+    // Map
+    'Map of our world'                      => 'Map of our world',
+    'map-page'                              => [
+        'new' => [
+            'New Version'  => 'New version',
+            'description1' => 'Currently in active development.',
+            'description2' => '
+                    Map of only a small part of the world for now.
+                    However, it has new buildings and 3D!',
+        ],
+        'old' => [
+            'Old Version' => 'Old version',
+            'description' => '
+                    This map has not been updated for a very long time and it depicts the world of 5-7 years ago.
+                    However, its size is complete and you can see where which biomes/rivers/seas are.',
+        ],
+    ],
 ];

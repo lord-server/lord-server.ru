@@ -9,7 +9,7 @@ $position = $players->firstItem();
 
 ?>
 @extends('layouts.app')
-@section('title', 'Игроки')
+@section('title', __('messages.Players'))
 
 @section('content')
     <div class="row">

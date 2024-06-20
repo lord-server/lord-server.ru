@@ -1,13 +1,12 @@
 @extends('layouts.app')
-@section('title', 'Кланы сервера')
+@section('title', __('messages.Server clans'))
 
 @section('jumbotron')
     <div class="jumbotron">
         <div class="center">
             <h1>@yield('title')</h1>
             <p>
-                — Это гундабадские варги. Они догонят тебя!<br>
-                — А это росгобельские кролики. Посмотрим, кто кого!
+                <?= __('messages.jumbo.phrase.clans') ?>
             </p><p>
                 <a class="btn btn-success btn-lg" href="/play"><?= __('messages.Play') ?></a>
             </p>
