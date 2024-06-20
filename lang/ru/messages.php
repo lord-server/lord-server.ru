@@ -4,37 +4,37 @@ return [
     //--------------------------------------------------------------------------
     // Alerts prefixes (Layout)
     //--------------------------------------------------------------------------
-    'Well done!'                            => 'Готово!',
-    'Warning!'                              => 'Предупреждение!',
-    'Info:'                                 => 'Инфо:',
-    'Error!'                                => 'Ошибка!',
+    'Well done!'                                => 'Готово!',
+    'Warning!'                                  => 'Предупреждение!',
+    'Info:'                                     => 'Инфо:',
+    'Error!'                                    => 'Ошибка!',
     //--------------------------------------------------------------------------
     // Alerts messages
     //--------------------------------------------------------------------------
-    'Failed to login'                       => 'Не удалось войти',
-    'Can\'t get Discord token'              => 'Не удалось получить Discord-токен',
-    'Internal server error'                 => 'Внутренняя ошибка сервера',
+    'Failed to login'                           => 'Не удалось войти',
+    'Can\'t get Discord token'                  => 'Не удалось получить Discord-токен',
+    'Internal server error'                     => 'Внутренняя ошибка сервера',
     //--------------------------------------------------------------------------
     // Header & Jumbotron
     //--------------------------------------------------------------------------
-    'About Server'                          => 'О сервере',
-    'Play'                                  => 'Играть',
+    'About Server'                              => 'О сервере',
+    'Play'                                      => 'Играть',
     //---- header/footer: ----
-    'Rules'                                 => 'Правила',
-    'Spawns'                                => 'Спауны',
-    'Players'                               => 'Игроки',
-    'Clans'                                 => 'Кланы',
-    'Map'                                   => 'Карта',
-    'Videos'                                => 'Видео',
-    'Login'                                 => 'Войти',
+    'Rules'                                     => 'Правила',
+    'Spawns'                                    => 'Спауны',
+    'Players'                                   => 'Игроки',
+    'Clans'                                     => 'Кланы',
+    'Map'                                       => 'Карта',
+    'Videos'                                    => 'Видео',
+    'Login'                                     => 'Войти',
     //---- footer: ----
-    'Community'                             => 'Сообщество',
-    'Development'                           => 'Development',
-    'VK'                                    => 'ВКонтакте',
-    'Lord Server Team'                      => 'Команда сервера LORD',
-    'Sources'                               => 'Исходники',
+    'Community'                                 => 'Сообщество',
+    'Development'                               => 'Development',
+    'VK'                                        => 'ВКонтакте',
+    'Lord Server Team'                          => 'Команда сервера LORD',
+    'Sources'                                   => 'Исходники',
     //---- jumbotron: ----
-    'jumbo'                                 => [
+    'jumbo'                                     => [
         'phrase' => [
             'home'   => '
                 Российский сервер Minetest по мотивам легендариума Дж. Толкина ("Властелин Колец", "Хоббит", ...), где игроки —
@@ -57,17 +57,17 @@ return [
     // On Pages messages
     //--------------------------------------------------------------------------
     // Home:
-    'News'                                  => 'Новости',
-    'Gallery'                               => 'Галерея',
-    'In Game'                               => 'В игре',
-    'PvP-Tournament'                        => 'PvP-Турнир',
+    'News'                                      => 'Новости',
+    'Gallery'                                   => 'Галерея',
+    'In Game'                                   => 'В игре',
+    'PvP-Tournament'                            => 'PvP-Турнир',
     // ----
-    'Others'                                => 'Другие',
+    'Others'                                    => 'Другие',
     // Spawns:
-    'Where players are born'                => 'Где рождаются игроки',
-    'actively-builds'                       => 'активно строится, скоро запуск',
-    'planned'                               => 'запланирован',
-    'spawns'                                => [
+    'Where players are born'                    => 'Где рождаются игроки',
+    'actively-builds'                           => 'активно строится, скоро запуск',
+    'planned'                                   => 'запланирован',
+    'spawns'                                    => [
         'Orcish'  => 'Орочий',
         'Human'   => 'Людской',
         'Hobbit'  => 'Хоббичий',
@@ -75,24 +75,24 @@ return [
         'Dwarven' => 'Гномий',
         'Central' => 'Центральный',
     ],
-    'roles'                                 => [
+    'roles'                                     => [
         'Keepers'       => 'Смотрители',
         'Squad'         => 'Дружина',
         'vacancy'       => 'вакансия',
         'vacancy-later' => 'вакансия-позже',
     ],
     // Play
-    'How to play'                           => 'Как поиграть',
-    'Download Minetest'                     => 'Скачайте Minetest',
-    'Launch & find LORD'                    => 'Запустите MT и найдите сервер L.O.R.D.',
-    'Open the %s tab'                       => 'Откройте вкладку %s',
-    'Join Game'                             => 'Подключиться к игре',
-    'Type %s or %s in the search and click' => 'Наберите в поиске %s или %s и нажмите',
+    'How to play'                               => 'Как поиграть',
+    'Download Minetest'                         => 'Скачайте Minetest',
+    'Launch & find LORD'                        => 'Запустите MT и найдите сервер L.O.R.D.',
+    'Open the %s tab'                           => 'Откройте вкладку %s',
+    'Join Game'                                 => 'Подключиться к игре',
+    'Type %s or %s in the search and click'     => 'Наберите в поиске %s или %s и нажмите',
     // Clans
-    'Server clans'                          => 'Кланы сервера',
+    'Server clans'                              => 'Кланы сервера',
     // Map
-    'Map of our world'                      => 'Карта нашего мира',
-    'map-page'                              => [
+    'Map of our world'                          => 'Карта нашего мира',
+    'map-page'                                  => [
         'new' => [
             'New Version'  => 'Новый вариант',
             'description1' => 'На данный момент находится в активной разработке.',
@@ -107,4 +107,10 @@ return [
                     Однако её размер полон и можно посмотреть, где какие биомы/реки/моря.',
         ],
     ],
+
+    // 404
+    'Page not found'                            => 'Страница не найдена',
+    'Sorry, page not found!'                    => 'Пардон, страница, которую вы ищите, не найдена!',
+    'Please let us know about the missing page' => 'Пожалуйста, сообщите нам о пропавшей странице',
+    'report an error on the website'            => 'сообщить об ошибке на сайте',
 ];

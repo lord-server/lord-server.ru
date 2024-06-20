@@ -1,24 +1,19 @@
 @extends('layouts.app')
+@section('title', __('messages.Page not found'))
 
-@section('jumbotron')
-    <div class="jumbotron reduced not-found">
-        <div class="center">
-            <h1>Страница не найдена</h1>
-        </div>
-    </div>
-@endsection
+
 
 @section('content')
     <img style="float:left;margin: -5px 40px 0 0;"
          src="/img/unknown_node.jpg"
          alt="unknown_node">
 
-    <h2>Пардон, страница не найдена!</h2>
+    <h2><?= __('messages.Sorry, page not found!') ?></h2>
 
     <p>
-        Пожалуйста, сообщите нам о пропавшей странице:<br>
-        <a href="https://github.com/lord-server/lord-server.ru/issues" target="_blank">
-            сообщить об ошибке на сайте
+        <?= __('messages.Please let us know about the missing page') ?>:<br>
+        <a href="https://github.com/lord-server/lord-server.ru/issues/new" target="_blank">
+            <?= __('messages.report an error on the website') ?>
         </a>.
     </p>
 @endsection
