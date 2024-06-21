@@ -7,3 +7,5 @@ Route::apiResources([
     '/players' => Api\PlayerController::class,
     '/clans'   => Api\ClanController::class,
 ]);
+
+Route::apiResource('/clans.players', Api\Clan\PlayerController::class);
