@@ -43,38 +43,37 @@
         <h2>Game on LORD</h2>
         <h3>Game Start:</h3>
         <p>
-            Appearing in the world, you choose a character's <b>race</b>:
+            Upon your arrival, you choose a character's <b>race</b>:
             <strong class="colored">People</strong>, <strong class="colored">Gnomes</strong>,
             <strong class="colored">Elves</strong>, <strong class="colored">Hoobbits</strong>,
             <strong class="colored">Orcs</strong>, - and its <strong>gender</strong> and <strong>skin</strong>,
-            and then begin a fascinating journey through the magical world of Tolkien.
+            and then begin a fascinating journey through the magical world of Tolkien's Middlearth.
         </p>
 
 
         <h3>Races and Spawns</h3>
         <p>
-            Each race has its own spawn, where you appear after choosing it.
+            When you first arrive on the server, you have to choose a race. After doing so, you will be automatically teleported to the corresponding spawn. Each race has its own unique spawn.
         </p>
         <p>
-            You will be taken to the spawn of your race using the traditional command <code>/spawn</code>.<br>
-            Ancient central, universal spawn - <code>/center</code>.<br>
-            In addition, you can get to the elven spawn “Hall of Life” with the command <code>/life</code>,
-            and for the orc spawn “Chamber of Death” - <code>/death</code>.
+            To get back to the spawn of your race, you can use the traditional command <code>/spawn</code>.<br>
+            To get to the ancient, universal spawn, use - <code>/center</code>.<br>
+            In addition, you can get to the elven spawn “Hall of Life” using the command <code>/life</code>,
+            and to the orc spawn “The Death Hall” using - <code>/death</code>.
         </p>
         <p>
-            Each racial spawn has <span class="colored">Watchers</span> (see below).
+            Each racial spawn has a group <span class="colored">Watchers</span> ,who take care of it and constantly try to improve it. (see below).
         </p>
 
 
         <h3>Crafting recipes</h3>
         <p>
-            In our little Middle-earth, everyone keeps books with crafting recipes with them. There are many of these books
-            but first you have to craft <span class="colored">"Book "Crafting Basics""</span>.
-            Don't know how? Look around at any spawn and find posters with crafting recipes,
-            that will make this book possible.
+            In our little Middle-earth, everyone keeps books with crafting recipes with them. There are many kinds of those, but first of all, you have to make the one with the most basic recipes.            but first you have to craft <span class="colored">"Book "Crafting Basics""</span>.
+            Don't know how to? Look around at any spawn to find posters with crafting recipes that will
+            help you make this book.
         </p>
         <p>
-            Crafting ingredients will help you find NPCs standing at spawns who will be happy to answer your questions.
+            Don't know how to get crafting ingredients? Have a look around the spawn to find NPCs: They will be more than happy to answer your questions!
         </p>
         <p>
             “Basics of Crafting” will begin your immersion into the abyss of knowledge about crafts, and there are still dozens of books written by
