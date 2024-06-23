@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -25,6 +26,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property-read Player   $leader        `Player`, who leads the Clan.
  * @property-read Player   $negotiator    `Player`, who is the clan's representative in negotiations.
  * @property-read Player[] $players       List of Clan `Player`'s, who is the clan's members.
+ *
+ * @mixin Builder
  */
 class Clan extends Model
 {

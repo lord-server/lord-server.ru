@@ -8,4 +8,6 @@ Route::apiResources([
     '/clans'   => Api\ClanController::class,
 ]);
 
-Route::apiResource('/clans.players', Api\Clan\PlayerController::class);
+Route::apiResource('/clans.players', Api\Clan\PlayerController::class)
+    ->only(['index', 'update', 'destroy'])
+;

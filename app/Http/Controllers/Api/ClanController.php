@@ -8,6 +8,7 @@ use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Http\Response;
+use Throwable;
 
 class ClanController
 {
@@ -61,8 +62,10 @@ class ClanController
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @throws Throwable
      */
-    public function destroy(Clan $clan)
+    public function destroy(Clan $clan): ?bool
     {
         return $clan->deleteOrFail();
     }
