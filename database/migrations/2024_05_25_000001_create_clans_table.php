@@ -19,6 +19,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->foreignId('leader_id')->unique()->constrained('players');
             $table->foreignId('negotiator_id')->unique()->constrained('players');
+            $table->boolean('is_blocked')->default(false);
+            $table->boolean('is_online')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

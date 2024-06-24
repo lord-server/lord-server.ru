@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->enum('race', ['human', 'elf', 'hobbit', 'dwarf', 'orc', 'shadow']);
             $table->integer('experience')->default(0);
+            $table->boolean('is_online')->default(false);
             $table->timestamp('last_login')->useCurrent();
             $table->timestamps();
         });

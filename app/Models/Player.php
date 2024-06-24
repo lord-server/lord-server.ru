@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string      $name       player MT account name.
  * @property Player\Race $race       the race of the player (one of enum Player\Race::< cases >).
  * @property int         $experience experience score of the Player, gained in the game.
+ * @property boolean     $is_online  determine whether the player is online.
  * @property Carbon      $last_login date & time, when player was latest logged in the game.
  * @property int         $clan_id    ID of the Clan, in which the Player is.
  * @property Carbon      $created_at when db-record was created (automatically fills).
@@ -33,7 +34,7 @@ class Player extends Model
      *
      * @var array
      */
-    protected $fillable = ['race', 'experience', 'last_login'];
+    protected $fillable = ['race', 'experience', 'last_login', 'is_online'];
 
     /**
      * The attributes that should be cast.
@@ -44,6 +45,7 @@ class Player extends Model
         'last_login' => 'datetime:Y-m-d H:i:s',
         'created_at' => 'datetime:Y-m-d H:i:s',
         'updated_at' => 'datetime:Y-m-d H:i:s',
+        'is_online'  => 'boolean',
     ];
 
     /**

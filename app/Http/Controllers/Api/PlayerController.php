@@ -49,7 +49,7 @@ class PlayerController
      */
     public function update(Request $request, Player $player): Player
     {
-        $attributes = $request->only(['race', 'experience', 'last_login']);
+        $attributes = $request->only(['race', 'experience', 'last_login', 'is_online']);
         $player->fill($attributes);
         $player->save();
 
