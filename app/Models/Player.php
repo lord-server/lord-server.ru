@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -47,6 +48,12 @@ class Player extends Model
         'updated_at' => 'datetime:Y-m-d H:i:s',
         'is_online'  => 'boolean',
     ];
+
+    protected function race(): Attribute
+    {
+        // In the Game for some reason 'human' called 'man'
+        return Attribute::set(fn(string $value) => $value === 'man' ? Player\Race::Human : $value);
+    }
 
     /**
      * Create a new belongs to relationship. (One to many).
