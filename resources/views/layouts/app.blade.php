@@ -52,20 +52,30 @@ $user = Auth::user();
                 <li><a href="/rules"><?= __('messages.Rules') ?></a></li>
                 <li><a href="/spawns"><?= __('messages.Spawns') ?></a></li>
                 <li><a href="/clans" class="text-danger"><?= __('messages.Clans') ?></a></li>
-                <li><a href="/map"><?= __('messages.Map') ?></a></li>
-                <li><a href="/videos"><?= __('messages.Videos') ?></a></li>
-                <li><a href="https://vk.com/minetest_lord" target="_blank">
+                <li class="hidden-sm"><a href="/map"><?= __('messages.Map') ?></a></li>
+                <li class="hidden-sm"><a href="/videos"><?= __('messages.Videos') ?></a></li>
+                <li class="hidden-md hidden-sm">
+                    <a href="https://vk.com/minetest_lord" target="_blank">
                         <i class="fab fa-vk"></i>
-                    </a></li>
-                <li><a href="https://www.discord.gg/uTX3mbb" target="_blank">
+                    </a>
+                </li>
+                <li class="hidden-sm"><a href="https://www.discord.gg/uTX3mbb" target="_blank">
                         <i class="fab fa-discord"></i>
-                    </a></li>
-                <li><a href="https://www.youtube.com/channel/UCVULgQLzFwXdwG02zoJOfIg" target="_blank">
+                    </a>
+                </li>
+                <li class="hidden-md hidden-sm">
+                    <a href="https://www.youtube.com/channel/UCVULgQLzFwXdwG02zoJOfIg" target="_blank">
                         <i class="fab fa-youtube"></i>
-                    </a></li>
+                    </a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right user-menu">
+                <li>
+                    <a href="https://boosty.to/lord-server" class="btn navbar-btn btn-boosty" target="_blank">
+                        <img class="boosty" alt="Boosty" src="/img/boosty-logo.svg"/>
+                    </a>
+                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" id="choose-lang" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <?= App::getLocale() ?> <span class="caret"></span>
