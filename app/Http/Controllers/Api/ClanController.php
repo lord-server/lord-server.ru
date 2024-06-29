@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\ClanResource;
 use App\Models\Clan;
+use App\Models\Player;
 use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Throwable;
 
 class ClanController
@@ -22,22 +24,29 @@ class ClanController
 
     /**
      * Store a newly created resource in storage.
+     * @throws Throwable
      */
     public function store(Request $request): Clan|Response
     {
         try {
-            $attributes = $request->only(['name','title','leader_id','negotiator_id']);
-            if ( ! isset($attributes['negotiator_id'])) {
-                $attributes['negotiator_id'] = $attributes['leader_id'];
-            }
+            return DB::transaction(function () use ($request) {
+                $attributes = $request->only(['name', 'title', 'leader_id', 'negotiator_id']);
+                if ( ! isset($attributes['negotiator_id'])) {
+                    $attributes['negotiator_id'] = $attributes['leader_id'];
+                }
+                $clan = (new Clan())->fill($attributes);
+                $clan->save();
 
-            $clan = (new Clan())->fill($attributes);
-            $clan->save();
+                Player::find($attributes['leader_id'])->update(['clan_id' => $clan->id]);
+                if ($attributes['negotiator_id'] != $attributes['leader_id']) {
+                    Player::find($attributes['negotiator_id'])->update(['clan_id' => $clan->id]);
+                }
+
+                return $clan;
+            });
         } catch (UniqueConstraintViolationException) {
             return response(status: 409);
         }
-
-        return $clan;
     }
 
     /**

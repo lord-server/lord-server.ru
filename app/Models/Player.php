@@ -35,7 +35,7 @@ class Player extends Model
      *
      * @var array
      */
-    protected $fillable = ['race', 'experience', 'last_login', 'is_online'];
+    protected $fillable = ['race', 'experience', 'is_online', 'last_login', 'clan_id'];
 
     /**
      * The attributes that should be cast.
