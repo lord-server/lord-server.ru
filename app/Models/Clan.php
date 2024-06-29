@@ -67,6 +67,7 @@ class Clan extends Model
 
     /**
      * @return HasOne
+     * @noinspection PhpUnused
      */
     public function leader(): HasOne
     {
@@ -75,6 +76,7 @@ class Clan extends Model
 
     /**
      * @return HasOne
+     * @noinspection PhpUnused
      */
     public function negotiator(): HasOne
     {

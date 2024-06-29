@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * Database table `users` representation Model.
@@ -74,6 +75,7 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    #[ArrayShape(['email_verified_at' => "string", 'password' => "string"])]
     protected function casts(): array
     {
         return [

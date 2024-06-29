@@ -70,7 +70,7 @@ class Player extends Model
      *
      * @return Player\Builder
      */
-    public function newEloquentBuilder($query)
+    public function newEloquentBuilder($query): Player\Builder
     {
         return new Player\Builder($query);
     }
@@ -85,6 +85,11 @@ class Player extends Model
         return $this->id === $clan->leader_id;
     }
 
+    /**
+     * @param Clan $clan
+     *
+     * @return bool
+     */
     public function isNegotiatorOf(Clan $clan): bool
     {
         return $this->id === $clan->negotiator_id;

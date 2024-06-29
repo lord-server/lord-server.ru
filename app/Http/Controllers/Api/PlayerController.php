@@ -8,6 +8,7 @@ use Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Http\Response;
+use Throwable;
 
 class PlayerController
 {
@@ -58,8 +59,13 @@ class PlayerController
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @param Player $player
+     *
+     * @return bool|null
+     * @throws Throwable
      */
-    public function destroy(Player $player)
+    public function destroy(Player $player): ?bool
     {
         return $player->deleteOrFail();
     }

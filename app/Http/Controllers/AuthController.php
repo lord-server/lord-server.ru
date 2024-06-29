@@ -37,7 +37,7 @@ class AuthController extends Controller
 
             $user = User::findByDiscordId($discordUser->id);
             if ( ! $user) {
-                $user = User::create([
+                $user = (new User())->create([
                     'name'                  => $discordUser->name,
                     'email'                 => $discordUser->email,
                     'discord_id'            => $discordUser->id,
