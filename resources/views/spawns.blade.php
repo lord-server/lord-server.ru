@@ -80,7 +80,7 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <i>&lt;<?= __('messages.actively-builds') ?>&gt;</i>
+                        <img class="img-responsive" src="img/spawns/hobbit.png" alt="Hobbit Spawn">
                     </p>
                     <p>
                         <b><?= __('messages.roles.Keepers') ?>:</b>
@@ -107,7 +107,8 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        <i class="text-muted">&lt;<?= __('messages.planned') ?>&gt;</i>
+                        <i style="position: absolute;">&lt;<?= __('messages.actively-builds') ?>&gt;</i>
+                        <img class="img-responsive" src="img/spawns/hobbit.png" alt="Hobbit Spawn" style="opacity: 0">
                     </p>
                     <p>
                         <b><?= __('messages.roles.Keepers') ?>:</b>
