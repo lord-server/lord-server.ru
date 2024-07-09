@@ -20,6 +20,11 @@ $position = $players->firstItem();
                     <th scope="row" width="1%">
                         <?= $position++ ?>
                     </th>
+                    <td width="1%" class="hidden-xs">
+                        <i class="fa fa-xs fa-circle text-<?= $player->is_online ? 'online' : 'offline' ?>"
+                           data-toggle="tooltip" title="Последний вход в игру"
+                        ></i>
+                    </td>
                     <td width="1%">
                         <b><?= $player->name ?></b>
                     </td>
