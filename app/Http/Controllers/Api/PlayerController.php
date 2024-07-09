@@ -26,15 +26,16 @@ class PlayerController
     public function store(Request $request): Player|Response
     {
         try {
-            $player       = new Player();
-            $player->name = $request->get('name');
-            $player->race = $request->get('race');
+            $player         = new Player();
+            $player->name   = $request->get('name');
+            $player->race   = $request->get('race', Player\Race::DEFAULT->value);
+            $player->gender = $request->get('gender', Player\Gender::DEFAULT->value);
             $player->save();
         } catch (UniqueConstraintViolationException) {
             return response(status: 409);
         }
 
-        return $player;
+        return $player->refresh();
     }
 
     /**
@@ -50,7 +51,7 @@ class PlayerController
      */
     public function update(Request $request, Player $player): Player
     {
-        $attributes = $request->only(['race', 'experience', 'last_login', 'is_online']);
+        $attributes = $request->only(['race', 'gender', 'experience', 'last_login', 'is_online']);
         $player->fill($attributes);
         $player->save();
 
