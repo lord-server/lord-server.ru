@@ -32,4 +32,10 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	&.map p {
+		background-color: rgba(0,0,0,0.15);
+	}
+	&.map {
+		background-image: url("../../public/img/map/background-map.png");
+	}
 }

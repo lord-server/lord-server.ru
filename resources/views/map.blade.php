@@ -2,7 +2,7 @@
 @section('title', __('messages.Map of our world'))
 
 @section('jumbotron')
-    <div class="jumbotron">
+    <div class="jumbotron map">
         <div class="center">
             <h1>@yield('title')</h1>
             <p>
