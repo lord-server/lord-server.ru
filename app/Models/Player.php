@@ -11,16 +11,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * Database table `players` representation Model.
  *
- * @property int         $id         [PK] (autoincrement).
- * @property string      $name       player MT account name.
- * @property Player\Race $race       the race of the player (one of enum Player\Race::< cases >).
- * @property int         $experience experience score of the Player, gained in the game.
- * @property boolean     $is_online  determine whether the player is online.
- * @property Carbon      $last_login date & time, when player was latest logged in the game.
- * @property int         $clan_id    ID of the Clan, in which the Player is.
- * @property Carbon      $created_at when db-record was created (automatically fills).
- * @property Carbon      $updated_at when db-record was updated (automatically updates).
- * @property-read Clan   $clan       `Clan`, in which the Player is.
+ * @property int           $id         [PK] (autoincrement).
+ * @property string        $name       player MT account name.
+ * @property Player\Race   $race       race of the player (one of enum Player\Race::< cases >).
+ * @property Player\Gender $gender     gender of the player (one of enum Player\Gender::< cases >).
+ * @property int           $experience experience score of the Player, gained in the game.
+ * @property boolean       $is_online  determine whether the player is online.
+ * @property Carbon        $last_login date & time, when player was latest logged in the game.
+ * @property int           $clan_id    ID of the Clan, in which the Player is.
+ * @property Carbon        $created_at when db-record was created (automatically fills).
+ * @property Carbon        $updated_at when db-record was updated (automatically updates).
+ * @property-read Clan     $clan       `Clan`, in which the Player is.
  *
  * @method static Player\Builder query()
  *
@@ -35,7 +36,7 @@ class Player extends Model
      *
      * @var array
      */
-    protected $fillable = ['race', 'experience', 'is_online', 'last_login', 'clan_id'];
+    protected $fillable = ['race', 'gender', 'experience', 'is_online', 'last_login', 'clan_id'];
 
     /**
      * The attributes that should be cast.

@@ -17,12 +17,18 @@ class PlayerFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    #[ArrayShape(['name' => "string", 'race' => "array|mixed|null", 'last_login' => "\DateTime"])]
+    #[ArrayShape([
+        'name'       => "string",
+        'race'       => "\\App\\Models\\Player\\Race",
+        'gender'     => "\\App\\Models\\Player\\Gender",
+        'last_login' => "\DateTime",
+    ])]
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->userName(),
-            'race' => Arr::random(Player\Race::cases()),
+            'name'       => fake()->unique()->userName(),
+            'race'       => Arr::random(Player\Race::cases()),
+            'gender'     => Arr::random(Player\Gender::cases()),
             'last_login' => fake()->dateTimeBetween('-120 days'),
         ];
     }

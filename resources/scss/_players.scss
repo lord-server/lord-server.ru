@@ -1,0 +1,13 @@
+
+.label-p-race, .label-p-gender {
+    border: 1px solid;
+}
+
+.label-p-race {
+    color: $player-race;
+}
+.label-p-gender {
+    &.male { color: $player-gender-male; }
+    &.female { color: $player-gender-female; }
+}
+

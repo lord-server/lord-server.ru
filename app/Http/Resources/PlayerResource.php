@@ -20,7 +20,7 @@ class PlayerResource extends JsonResource
     public function toArray(Request $request): array
     {
         return Arr::only(parent::toArray($request), [
-            'id', 'name', 'race', 'experience', 'last_login', 'clan_id', 'created_at', 'updated_at',
+            'id', 'name', 'race', 'gender', 'experience', 'last_login', 'clan_id', 'created_at', 'updated_at',
         ]);
     }
 }

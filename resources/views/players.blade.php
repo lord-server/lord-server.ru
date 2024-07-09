@@ -23,8 +23,12 @@ $position = $players->firstItem();
                     <td width="1%">
                         <b><?= $player->name ?></b>
                     </td>
-                    <td align="left" class="hidden-xs"><span class="label label-small label-default">
-                            <?= $player->race ?></span></td>
+                    <td width="1%" class="hidden-xs">
+                        <span class="label label-small label-p-race <?= $player->race ?>"><?= $player->race ?></span>
+                    </td>
+                    <td width="1%" class="hidden-xs">
+                        <span class="label label-small label-p-gender <?= $player->gender ?>"><?= $player->gender ?></span>
+                    </td>
                     <td align="right">
                         <i class="small" data-toggle="tooltip" title="Последний вход в игру">
                             <?= $player->last_login->diffForHumans() ?>
