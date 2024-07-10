@@ -50,6 +50,16 @@ class Player extends Model
         'is_online'  => 'boolean',
     ];
 
+    /**
+     * @param string $name
+     *
+     * @return Player
+     */
+    public static function getByName(string $name): Player
+    {
+        return (new static())->where('name', $name)->firstOrFail();
+    }
+
     protected function race(): Attribute
     {
         // In the Game for some reason 'human' called 'man'

@@ -32,7 +32,7 @@ class PlayerController
             $player->gender = $request->get('gender', Player\Gender::DEFAULT->value);
             $player->save();
         } catch (UniqueConstraintViolationException) {
-            return response(status: 409);
+            return response(Player::getByName($request->get('name')), status: 409);
         }
 
         return $player->refresh();
