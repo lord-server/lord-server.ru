@@ -28,12 +28,13 @@ class ClanController
      */
     public function store(Request $request): Clan|Response
     {
+        $attributes = $request->only(['name', 'title', 'leader_id', 'negotiator_id']);
+        if ( ! isset($attributes['negotiator_id'])) {
+            $attributes['negotiator_id'] = $attributes['leader_id'];
+        }
+
         try {
-            return DB::transaction(function () use ($request) {
-                $attributes = $request->only(['name', 'title', 'leader_id', 'negotiator_id']);
-                if ( ! isset($attributes['negotiator_id'])) {
-                    $attributes['negotiator_id'] = $attributes['leader_id'];
-                }
+            return DB::transaction(function () use ($attributes, $request) {
                 $clan = (new Clan())->fill($attributes);
                 $clan->save();
 
@@ -44,8 +45,19 @@ class ClanController
 
                 return $clan;
             });
-        } catch (UniqueConstraintViolationException) {
-            return response(status: 409);
+        } catch (UniqueConstraintViolationException $exception) {
+            if ( ! preg_match('/1062 Duplicate entry \'.*\' for key \'(.*)\'/', $exception->getMessage(), $matches)) {
+                \Log::error('Can\'t conflicted unique key');
+                return response(status: 409);
+            }
+
+            $field = (string)str($matches[1])->remove('clans_')->remove('_unique');
+
+            return response([
+                'field'   => $field,
+                'message' => "Clan with same `$field` already exists",
+                'entry'   => (new Clan())->where($field, $attributes[$field])->firstOrFail(),
+            ], status: 409);
         }
     }
 
