@@ -22,7 +22,7 @@ $position = $players->firstItem();
                     </th>
                     <td width="1%" class="hidden-xs">
                         <i class="fa fa-xs fa-circle text-<?= $player->is_online ? 'online' : 'offline' ?>"
-                           data-toggle="tooltip" title="<?= __($player->is_online ? 'Now in game' : 'Now offline') ?>"
+                           data-toggle="tooltip" title="<?= __($player->is_online ? 'messages.Now in game' : 'messages.Now offline') ?>"
                         ></i>
                     </td>
                     <td width="1%">
@@ -35,7 +35,7 @@ $position = $players->firstItem();
                         <span class="label label-small label-p-gender <?= $player->gender ?>"><?= $player->gender ?></span>
                     </td>
                     <td align="right">
-                        <i class="small" data-toggle="tooltip" title="<?= __('Last entry into the game') ?>">
+                        <i class="small" data-toggle="tooltip" title="<?= __('messages.Last entry into the game') ?>">
                             <?= $player->last_login->diffForHumans() ?>
                         </i>
                     </td>

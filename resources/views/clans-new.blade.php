@@ -24,7 +24,7 @@ use App\Models\Clan;
 @section('content')
     <h2></h2>
 
-    <div class="row clan-list">
+    <div class="clan-list">
 
         <?php foreach ($clans as $clan): ?>
         <a href="#/clans/<?= $clan->name ?>" class="thumbnail">
@@ -36,7 +36,15 @@ use App\Models\Clan;
                 </div>
                 <div class="clearfix visible-xs-block"></div>
                 <div class="clan-info caption col-xs-12 col-sm-9">
-                    <h3 class="clan-title"><?= $clan->title ?></h3>
+                    <h3 class="clan-title">
+                        <?= $clan->title ?>
+                        <label class="pull-right label label-clan-<?= $clan->is_online ? 'online' : 'offline' ?>"
+                               data-toggle="tooltip" title="<?= __($clan->is_online ? 'messages.Now in game' : 'messages.Now offline') ?>"
+                        >
+                            <i class="fa fa-xs fa-circle text-<?= $clan->is_online ? 'online' : 'offline' ?>"></i>
+                            <?= $clan->is_online ? 'online' : 'offline' ?>
+                        </label>
+                    </h3>
                     <p>
                         <?= $clan->about ?>
                     </p>
