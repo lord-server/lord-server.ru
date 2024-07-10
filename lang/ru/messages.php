@@ -89,8 +89,16 @@ return [
     'Open the %s tab'                           => 'Откройте вкладку %s',
     'Join Game'                                 => 'Подключиться к игре',
     'Type %s or %s in the search and click'     => 'Наберите в поиске %s или %s и нажмите',
+    // Players
+    'Now in game'                               => 'Сейчас в игре',
+    'Now offline'                               => 'Сейчас оффлайн',
+    'Last entry into the game'                  => 'Последний вход в игру',
     // Clans
     'Server clans'                              => 'Кланы сервера',
+    'Leader'                                    => 'Глава',
+    'Negotiator'                                => 'Представитель',
+    'Leader and Negotiator'                     => 'Глава и Представитель',
+    'of the clan'                               => 'клана',
     // Map
     'Map of our world'                          => 'Карта нашего мира',
     'map-page'                                  => [

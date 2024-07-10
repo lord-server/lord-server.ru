@@ -94,8 +94,16 @@ return [
     'Open the %s tab'                           => 'Open the %s tab',
     'Join Game'                                 => 'Join Game',
     'Type %s or %s in the search and click'     => 'Type %s or %s in the search and click',
+    // Players
+    'Now in game'                               => 'Now in game',
+    'Now offline'                               => 'Now offline',
+    'Last entry into the game'                  => 'Last entry into the game',
     // Clans
     'Server clans'                              => 'Server clans',
+    'Leader'                                    => 'Leader',
+    'Negotiator'                                => 'Negotiator',
+    'Leader and Negotiator'                     => 'Leader and Negotiator',
+    'of the clan'                               => 'of the clan',
     // Map
     'Map of our world'                          => 'Map of our world',
     'map-page'                                  => [

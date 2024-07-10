@@ -44,10 +44,17 @@ use App\Models\Clan;
                         <div class="pull-right clan-members">
                             <?php foreach ($clan->players as $player): ?>
                                 <?php if ($player->isLeaderOf($clan)): ?>
-                                    <?php $tooltip = ($player->isNegotiatorOf($clan) ? 'Глава и Представитель' : 'Глава') . ' клана' ?>
+                                    <?php
+                                        $tooltip = ($player->isNegotiatorOf($clan)
+                                            ? __('messages.Leader and Negotiator')
+                                            : __('messages.Leader')
+                                        ) . ' ' . __('messages.of the clan')
+                                    ?>
                                     <b class="label label-success" data-toggle="tooltip" title="<?= $tooltip ?>"><?= $player->name ?></b>
                                 <?php elseif ($player->isNegotiatorOf($clan)): ?>
-                                    <b class="label label-info" data-toggle="tooltip" title="Представитель клана"><?= $player->name ?></b>
+                                    <b class="label label-info"
+                                       data-toggle="tooltip" title="<?= __('messages.Negotiator') ?> <?= __('messages.of the clan') ?>"
+                                    ><?= $player->name ?></b>
                                 <?php else: ?>
                                     <b class="label label-default"><?= $player->name ?></b>
                                 <?php endif; ?>
