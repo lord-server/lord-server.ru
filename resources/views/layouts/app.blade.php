@@ -50,8 +50,9 @@ $user = Auth::user();
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/rules"><?= __('messages.Rules') ?></a></li>
+                <li><a href="/players"><?= __('messages.Players') ?></a></li>
                 <li><a href="/spawns"><?= __('messages.Spawns') ?></a></li>
-                <li><a href="/clans" class="text-danger"><?= __('messages.Clans') ?></a></li>
+                <li><a href="/clans"><?= __('messages.Clans') ?></a></li>
                 <li class="hidden-sm"><a href="/map"><?= __('messages.Map') ?></a></li>
                 <li class="hidden-sm"><a href="/videos"><?= __('messages.Videos') ?></a></li>
                 <li class="hidden-md hidden-sm">
