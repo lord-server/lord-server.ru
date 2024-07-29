@@ -63,9 +63,9 @@
                     <p>
                         <b><?= __('messages.roles.Squad') ?>:</b>
                         <div>
-                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
-                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
-                            <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-squad">@Alges</b>
+                            <b class="label label-squad">@Arseny_-</b>
+                            <b class="label label-squad">@Zhekil_mason</b>
                         </div>
                     </p>
                 </div>
