@@ -66,6 +66,7 @@
                             <b class="label label-squad">@Alges</b>
                             <b class="label label-squad">@Arseny_-</b>
                             <b class="label label-squad">@Zhekil_mason</b>
+                            <b class="label label-squad">@Smith_</b>
                         </div>
                     </p>
                 </div>
