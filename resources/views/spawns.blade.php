@@ -18,155 +18,172 @@
 
     <div class="row">
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
-                    <strong><?= __('messages.spawns.Orcish') ?></strong>
+                    <strong><?= __('messages.spawns.Orcish') ?>:</strong>
+                    <?= __('messages.spawns.Orcish_name') ?>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <img class="img-responsive" src="img/spawns/orcish.png" alt="Orcish Spawn">
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    <div>
+                        <img class="img-responsive" src="img/spawns/orcish.jpg" alt="Orcish Spawn">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@Lester_Grazziano</b>
                             <b class="label label-keeper">@SuperKate</b>
                         </div>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Squad') ?>:</b>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-squad">@Semi</b>
                             <b class="label label-squad">@TheWoLFrAm</b>
                             <b class="label label-squad">@Vldslv</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
-                    <strong><?= __('messages.spawns.Human') ?></strong>
+                    <strong><?= __('messages.spawns.Human') ?>:</strong>
+                    <?= __('messages.spawns.Human_name') ?>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <img class="img-responsive" src="img/spawns/human.png" alt="Human Spawn">
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    <div>
+                        <img class="img-responsive" src="img/spawns/human.jpg" alt="Human Spawn">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
-                            <b class="label label-keeper">@VladTs</b>
-                            <b class="label label-keeper">@Pilsner</b>
+                            <b class="label label-keeper">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-keeper">@Pilsner_human</b>
                         </div>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Squad') ?>:</b>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-squad">@Alges</b>
                             <b class="label label-squad">@Arseny_-</b>
                             <b class="label label-squad">@Zhekil_mason</b>
                             <b class="label label-squad">@Smith_</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
-                    <strong><?= __('messages.spawns.Hobbit') ?></strong>
+                    <strong><?= __('messages.spawns.Hobbit') ?>:</strong>
+                    <?= __('messages.spawns.Hobbit_name') ?>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <img class="img-responsive" src="img/spawns/hobbit.png" alt="Hobbit Spawn">
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    <div>
+                        <img class="img-responsive" src="img/spawns/hobbit.jpg" alt="Hobbit Spawn">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@Shishka</b>
-                            <b class="label label-keeper">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
+                            <b class="label label-keeper">@Shorty_Petus</b>
                         </div>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Squad') ?>:</b>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                             <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                             <b class="label label-squad">&lt;<?= __('messages.roles.vacancy') ?>&gt;</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
                     <strong><?= __('messages.spawns.Elven') ?></strong>
+                    <?= __('messages.spawns.Elven_name') ?>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <i style="position: absolute;">&lt;<?= __('messages.actively-builds') ?>&gt;</i>
-                        <img class="img-responsive" src="img/spawns/hobbit.png" alt="Hobbit Spawn" style="opacity: 0">
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    <div class="actively-builds">
+                        <p><b>&lt;<?= __('messages.actively-builds') ?>&gt;</b></p>
+                        <img class="img-responsive" src="img/spawns/actively-builds.jpg" alt="Elven Spawn">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Squad') ?>:</b>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
                     <strong><?= __('messages.spawns.Dwarven') ?></strong>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <i class="text-muted">&lt;<?= __('messages.planned') ?>&gt;</i>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    <div class="actively-builds">
+                        <p><b>&lt;<?= __('messages.actively-builds') ?>&gt;</b></p>
+                        <img class="img-responsive" src="img/spawns/actively-builds.jpg" alt="Dwarven Spawn">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
+                        <div>
+                            <b class="label label-keeper">@Vasiliy_Rus</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                        </div>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Squad') ?>:</b>
                         <div>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                             <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
+                            <b class="label label-default text-muted">&lt;<?= __('messages.roles.vacancy-later') ?>&gt;</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-lg-6">
-            <div class="panel panel-success download-panel">
+            <div class="panel panel-success spawn-panel">
                 <div class="panel-heading">
                     <strong><?= __('messages.spawns.Central') ?></strong>
                 </div>
                 <div class="panel-body">
-                    <p>
+                    <div>
+                        <img class="img-responsive" src="img/spawns/central.jpg" alt="Central Spawn" style="opacity:60%">
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.Command') ?>:</b>
                         <code>/center</code>
-                    </p>
-                    <p>
-                        <b><?= __('messages.roles.Keepers') ?>:</b>
+                    </div>
+                    <div>
+                        <b class="spawn-role-header"><?= __('messages.roles.Keepers') ?>:</b>
                         <div>
                             <b class="label label-keeper">@VladTs</b>
                             <b class="label label-keeper">@Alek</b>
                             <b class="label label-keeper">@Vasiliy_Rus</b>
                         </div>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

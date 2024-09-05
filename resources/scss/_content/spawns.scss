@@ -1,0 +1,26 @@
+
+.spawn-panel {
+    .panel-body {
+        > div {
+            margin-bottom: 1rem;
+
+            .spawn-role-header {
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .actively-builds {
+            text-align: center;
+            p {
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                transform: translate(-50%, -50%);
+            }
+            img {
+                opacity: 25%
+            }
+        }
+    }
+}
