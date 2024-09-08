@@ -64,6 +64,8 @@ Official [website](http://lord-server.ru/) of Russian L.O.R.D. server for Minete
 - For frontend developing & get changes on the fly:
   - `vendor/bin/sail npm run dev`
 
+For quick start use `./dev` command instead.
+
 ### Code Style Check & Fix
 We use [PHP-CS-Fixer](https://cs.symfony.com/) for control Code Style.
 Package [`php-cs-fixer`](https://packagist.org/packages/friendsofphp/php-cs-fixer) installed locally in the project, so you can check style with:
