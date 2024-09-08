@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -30,7 +29,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property-read Player   $negotiator    `Player`, who is the clan's representative in negotiations.
  * @property-read Player[] $players       List of Clan `Player`'s, who is the clan's members.
  *
- * @mixin Builder
+ * @method static Clan\Builder query()
+ *
+ * @mixin Clan\Builder
  */
 class Clan extends Model
 {
@@ -64,6 +65,16 @@ class Clan extends Model
         'is_blocked' => 'boolean',
         'is_online'  => 'boolean',
     ];
+
+    /**
+     * @param $query
+     *
+     * @return Clan\Builder
+     */
+    public function newEloquentBuilder($query): Clan\Builder
+    {
+        return new Clan\Builder($query);
+    }
 
     /**
      * @return HasOne

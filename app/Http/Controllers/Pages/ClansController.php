@@ -19,6 +19,7 @@ class ClansController extends Controller
     public function __invoke(Request $request): View
     {
         $clans = Clan::query()
+            ->thatActive()
             ->with('players')
             ->withCount('players') // we can for now use sub-query, because tables are very-very small
             ->orderBy('players_count', 'desc')
