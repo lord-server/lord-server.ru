@@ -36,11 +36,16 @@ return [
     //---- jumbotron: ----
     'jumbo'                                     => [
         'phrase' => [
-            'home'   => '
-                Russian Minetest server based on the legendarium of J. Tolkien ("The Lord of the Rings", "The Hobbit", ...),
-                where players - some alone, some in a squad, some in a clan - write the history of our server: work,
-                rest, trade, fight ...<br>
-                In a word, alone or with friends they show their valor!',
+//            TODO: phrase commented temporary. Restore phrase & move Telegram link into header.
+//            'home'   => '
+//                Russian Minetest server based on the legendarium of J. Tolkien ("The Lord of the Rings", "The Hobbit", ...),
+//                where players - some alone, some in a squad, some in a clan - write the history of our server: work,
+//                rest, trade, fight ...<br>
+//                In a word, alone or with friends they show their valor!',
+            'home' => '
+                Due to Discord blocking, all news is duplicated in Telegram.<br>
+                Stay in touch!
+            ',
             'spawns' => '
                 Today is my one hundred and eleventh
                 birthday. Yes, and alas...Eleventy- one

@@ -8,6 +8,11 @@
                 <?= __('messages.jumbo.phrase.home') ?>
             </p>
             <p>
+                <a class="btn btn-info btn-lg" href="https://t.me/lord_server_ru">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </p>
+            <p>
                 <a class="btn btn-success btn-lg" href="/about"><?= __('messages.About Server') ?></a>
                 <a class="btn btn-success btn-lg" href="/play"><?= __('messages.Play') ?></a>
             </p>
